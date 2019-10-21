@@ -20,15 +20,18 @@ class ViewController: UIViewController,WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        load remote url
-//        let url = URL(string: "https://www.google.com")!
-//        webView.load(URLRequest(url: url))
-//        webView.allowsBackForwardNavigationGestures = true
+        let url = URL(string: "http://test.mgtv.com:8081/storymap.html?test=1")!
+        webView.load(URLRequest(url: url))
+        webView.allowsBackForwardNavigationGestures = true
+        webView.scrollView.isScrollEnabled = false
+        //webView.scrollView.bounces = false
+        
         
 //        load local html file
-        let url = Bundle.main.url(forResource: "example", withExtension: "html", subdirectory: "local_html")!
-        webView.loadFileURL(url, allowingReadAccessTo: url)
-        let request = URLRequest(url: url)
-        webView.load(request)
+//        let url = Bundle.main.url(forResource: "example", withExtension: "html", subdirectory: "local_html")!
+//        webView.loadFileURL(url, allowingReadAccessTo: url)
+//        let request = URLRequest(url: url)
+//        webView.load(request)
     }
     
     override func loadView() {
