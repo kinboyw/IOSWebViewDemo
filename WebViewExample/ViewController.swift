@@ -12,6 +12,7 @@
 
 import UIKit
 import WebKit
+import WebViewJavascriptBridge
 
 class ViewController: UIViewController,WKNavigationDelegate {
     
@@ -20,7 +21,8 @@ class ViewController: UIViewController,WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        load remote url
-        let url = URL(string: "http://test.mgtv.com:8081/storymap.html?test=1")!
+        //let url = URL(string: "http://test.mgtv.com:8081/storymap.html?test=1&cid=323805&pid=5161959&uuid=63a426b5-a486-90b0-7d34-f1152b478315")!
+        let url = URL(string: "http://192.168.192.226:8999/index.html")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
         webView.scrollView.isScrollEnabled = false
